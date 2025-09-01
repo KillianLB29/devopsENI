@@ -1,0 +1,28 @@
+stages:
+  - preparation
+  - test
+  - build
+  - deploy
+
+jobs:
+  preparation_job:
+    stage: preparation
+    script:
+      - echo "Préparation de l'environnement..."
+
+  test_job:
+    stage: test
+    script:
+      - echo "Exécution des tests..."
+      - echo "Test réussi" > output/test_result.txt
+
+  build_job:
+    stage: build
+    script:
+      - echo "Construction du projet..."
+      - echo "Fichier de build" > output/build_artifact.txt
+
+  deploy_job:
+    stage: deploy
+    script:
+      - echo "Déploiement de l'application..."
